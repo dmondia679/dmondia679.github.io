@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    font-family: 'Inria Sans';
+}
+
+* {
+    text-rendering: optimizeLegibility;
+}
+
+
+@keyframes aparecerCentro {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.cat {
+    animation: aparecerCentro linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+.cat2 {
+    animation: aparecerCentro linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; 
+}
